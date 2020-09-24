@@ -278,11 +278,11 @@ def send_message(atext, vp, chat_id, ticker):                                   
         get_url(urla, urlvp, urlt)
 
 
-schedule.every().monday.at("18:00").do(scan)
-schedule.every().tuesday.at("18:00").do(scan)
-schedule.every().wednesday.at("18:00").do(scan)
-schedule.every().thursday.at("15:19").do(scan)
-schedule.every().sunday.at("18:00").do(scan)
+schedule.every().monday.at("16:00").do(scan)
+schedule.every().tuesday.at("16:00").do(scan)
+schedule.every().wednesday.at("16:00").do(scan)
+schedule.every().thursday.at("16:00").do(scan)
+schedule.every().sunday.at("16:00").do(scan)
 
 
 
