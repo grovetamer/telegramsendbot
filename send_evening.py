@@ -4,6 +4,7 @@ import bs4 as bs
 import urllib.request
 import schedule
 import time
+import datetime
 
 sauce = [urllib.request.urlopen('https://salvator.net/vp/f2/subst_001.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_002.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_003.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_004.htm').read()]
 #sauce = [urllib.request.urlopen('https://salvator.net/vp/f1/subst_001.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f1/subst_002.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f1/subst_003.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f1/subst_004.htm').read()]
@@ -289,7 +290,7 @@ def schleife():
     
     while True:
         schedule.run_pending()
-        print('Hello World!')
+        print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         time.sleep(5)
 
 
