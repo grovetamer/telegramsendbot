@@ -278,7 +278,7 @@ def send_message(atext, vp, chat_id, ticker):                                   
 
 
 schedule.every().monday.at("18:00").do(scan)
-schedule.every().tuesday.at("18:30").do(scan)
+schedule.every().tuesday.at("18:00").do(scan)
 schedule.every().wednesday.at("18:00").do(scan)
 schedule.every().thursday.at("18:00").do(scan)
 schedule.every().sunday.at("18:00").do(scan)
@@ -287,9 +287,9 @@ schedule.every().sunday.at("18:00").do(scan)
 
 def schleife():
     
-    scan()
     while True:
         schedule.run_pending()
+        print('Hello World!')
         time.sleep(5)
 
 
