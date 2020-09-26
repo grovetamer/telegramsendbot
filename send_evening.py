@@ -290,7 +290,7 @@ def schleife():
     
     while True:
         schedule.run_pending()
-        print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        print(datetime.datetime.now().strftime("%Y-%m-%d int(%H)+2:%M:%S"))
         time.sleep(5)
 
 
