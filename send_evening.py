@@ -289,7 +289,6 @@ schedule.every().sunday.at("16:00").do(scan)
 def schleife():
     
     while True:
-        scan()
         schedule.run_pending()
         print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         time.sleep(5)
