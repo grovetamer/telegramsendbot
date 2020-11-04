@@ -6,7 +6,6 @@ import schedule
 import time
 import datetime
 
-sauce = [urllib.request.urlopen('https://salvator.net/vp/f2/subst_001.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_002.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_003.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_004.htm').read()]
 #sauce = [urllib.request.urlopen('https://salvator.net/vp/f1/subst_001.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f1/subst_002.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f1/subst_003.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f1/subst_004.htm').read()]
 
 
@@ -19,6 +18,7 @@ chat_id = [-1001470454981, -1001226654660, -1001171531731, -1001362114793, -1001
 
 
 def scan():
+    sauce = [urllib.request.urlopen('https://salvator.net/vp/f2/subst_001.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_002.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_003.htm').read(), urllib.request.urlopen('https://salvator.net/vp/f2/subst_004.htm').read()]
     m = 0
     soup1 = bs.BeautifulSoup(sauce[0], 'lxml')
     soup2 = bs.BeautifulSoup(urllib.request.urlopen('https://salvator.net/vp/ticker.htm').read(), 'lxml')
@@ -278,11 +278,11 @@ def send_message(atext, vp, chat_id, ticker):                                   
         get_url(urla, urlvp, urlt)
 
 
-schedule.every().monday.at("16:00").do(scan)
-schedule.every().tuesday.at("16:00").do(scan)
-schedule.every().wednesday.at("16:00").do(scan)
-schedule.every().thursday.at("16:00").do(scan)
-schedule.every().sunday.at("16:00").do(scan)
+schedule.every().monday.at("17:00").do(scan)
+schedule.every().tuesday.at("17:00").do(scan)
+schedule.every().wednesday.at("17:00").do(scan)
+schedule.every().thursday.at("17:00").do(scan)
+schedule.every().sunday.at("17:00").do(scan)
 
 
 
