@@ -285,7 +285,6 @@ schedule.every().thursday.at("17:00").do(scan)
 schedule.every().sunday.at("17:00").do(scan)
 
 
-scan()
 def schleife():
     
     while True:
